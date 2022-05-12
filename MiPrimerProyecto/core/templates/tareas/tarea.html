@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<h1>Estoy en tareas</h1>
+<p>{{ name }}</p>
+<p>{{ edad }}</p>
+<p>{{ hobby }}</p>
+<p>{{ lista }}</p>
+
+{% for lis in lista %}
+
+    <h4>{{lis}}</h4>
+
+{% endfor %}
+
+{% endblock%}
