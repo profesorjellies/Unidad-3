@@ -15,3 +15,9 @@
 {% endfor %}
 
 {% endblock%}
+
+{% block script %}
+    {% load static %}    
+    <script src="{% static 'js/index.js'%}"></script>
+
+{% endblock %}
