@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<h2>Formulario de Agregar Tarea</h2>
+<form action="#" method="post">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-md-6">
+            <label for="">Titulo de Tarea</label>
+            <input type="text" name="titulo" id="" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <label for="">Fecha de Tarea</label>
+            <input type="date" name="fecha" id="" class="form-control">
+        </div>
+        <div class="col-md-12">
+            <label for="">Descripcion de Tarea</label>
+            <textarea name="descripcion" id="" rows="5" class="form-control"></textarea>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <button class="btn btn-success w-100">Guardar</button>
+        </div>
+        <div class="col-md-6">
+            <button type="reset" class="btn btn-danger w-100">Limpiar</button>
+        </div>
+    </div>
+</form>
+
+{% endblock%}
