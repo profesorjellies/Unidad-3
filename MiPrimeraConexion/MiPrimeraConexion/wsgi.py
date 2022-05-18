@@ -1,5 +1,5 @@
 """
-WSGI config for conexionBaseDatos project.
+WSGI config for MiPrimeraConexion project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'conexionBaseDatos.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'MiPrimeraConexion.settings')
 
 application = get_wsgi_application()

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<div class="row mt-2">
+    <div class="col-md-12">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_table }}
+            <input type="number" name="" id="">
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h3>{{mensaje}}</h3>
+    </div>
+</div>
+{% endblock %}
