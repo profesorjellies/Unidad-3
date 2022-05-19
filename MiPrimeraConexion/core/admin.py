@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import categoria, tarea
+from .models import categoria, Tarea
 
 # Register your models here.
 admin.site.register(categoria)
-admin.site.register(tarea)
+admin.site.register(Tarea)

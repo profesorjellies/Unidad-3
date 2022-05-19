@@ -1,9 +1,9 @@
 from dataclasses import fields
 from django.forms import ModelForm
-from .models import tarea
+from .models import Tarea
 
 class FormTarea(ModelForm):
     class Meta:
-        model = tarea
+        model = Tarea
         fields = ['nombre', 'descripcion', 'categoria']
 

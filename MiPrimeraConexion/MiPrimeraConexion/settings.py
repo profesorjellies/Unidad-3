@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'python_tarea',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'informatica.22',
         'HOST': 'localhost',
         'PORT': 3306
     }

@@ -17,6 +17,8 @@
                             <th>ID</th>
                             <th>Tarea</th>
                             <th>Descripcion</th>
+                            <th>Editar</th>
+                            <th>Eliminar</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -25,6 +27,12 @@
                             <td>{{t.id_tarea}}</td>
                             <td>{{t.nombre}}</td>
                             <td>{{t.descripcion}}</td>
+                            <td>
+                                <a href="{% url 'editar' t.id_tarea %}" class="btn btn-warning w-100">Editar</a>
+                            </td>
+                            <td>
+                                <a href="{% url 'eliminar' t.id_tarea %}" class="btn btn-danger w-100">Eliminar</a>
+                            </td>
                         </tr>
                         {% endfor %}
                     </tbody>
