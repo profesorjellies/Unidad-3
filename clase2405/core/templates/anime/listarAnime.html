@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/anime.css'%}">
+{% endblock%}
+
+{%block contenido %}    
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th width="5%">ID</th>
+                        <th width="30%">Nombre</th>
+                        <th width="15%">Capitulos</th>
+                        <th width="50%">Foto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for anime in animes %}
+                        <tr>
+                            <td>{{anime.id}}</td>
+                            <td>{{anime.nombre}}</td>
+                            <td>{{anime.capitulos}}</td>
+                            <td>
+                                <img src="{{anime.imagen}}" alt="" 
+                                class="imagenTabla">
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{%endblock%}
+
+{%block script %}
+
+{%endblock%}
