@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenido%}
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Agregar Anime</h1>
+        </div>
+    </div>
+    <hr>
+    <form id="form-agregar" method="post" action="{% url 'agregarAnime' %}">
+        {% csrf_token %}
+        <div class="row mt-2">
+            <div class="col-md-6">
+                <label for="">Nombre del Anime</label>
+                <input type="text" name="nombre" id="nombre" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <label for="">Capitulos</label>
+                <input type="text" name="capitulo" id="capitulo" class="form-control">
+            </div>
+            <div class="col-md-12">
+                <label for="">Imagen</label>
+                <input type="text" name="imagen" id="imagen" class="form-control">
+            </div>        
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-success w-100">Guardar</button>
+            </div>
+            <div class="col-md-6">
+                <button type="reset" class="btn btn-warning w-100">Resetear</button>
+            </div>
+        </div>
+    </form>
+    {% if mostrar_mensaje %}
+    <div class="row mt-2">
+        <div class="col-md-6">
+            <h1>{{mensaje}}</h1>
+        </div>
+    </div>
+    {% endif%}
+
+    <div class="row">
+        <div class="col-md-12">
+            <div id="mensaje"></div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+{% block script %}
+    <script src="{% static 'js/agregarAnime.js'%}"></script>
+{% endblock script %}

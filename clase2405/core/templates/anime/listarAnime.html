@@ -8,6 +8,9 @@
 
 {%block contenido %}    
     <div class="row">
+        <div class="col-md-6 mb-4">
+            <a href="{% url 'agregarAnime' %}" class="btn btn-success w-100">Agregar Anime</a>
+        </div>
         <div class="col-md-12">
             <table class="table table-hover">
                 <thead>
@@ -15,7 +18,9 @@
                         <th width="5%">ID</th>
                         <th width="30%">Nombre</th>
                         <th width="15%">Capitulos</th>
-                        <th width="50%">Foto</th>
+                        <th width="30%">Foto</th>
+                        <th width="10%">Editar</th>
+                        <th width="10%">Eliminar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -27,6 +32,12 @@
                             <td>
                                 <img src="{{anime.imagen}}" alt="" 
                                 class="imagenTabla">
+                            </td>
+                            <td>
+                                <a href="{% url 'editarAnime' anime.id %}" class="btn btn-warning w-100">Editar</a>
+                            </td>
+                            <td>
+                                <a href="{% url 'eliminarAnime' anime.id %}" class="btn btn-danger">Eliminar</a>
                             </td>
                         </tr>
                     {% endfor %}
