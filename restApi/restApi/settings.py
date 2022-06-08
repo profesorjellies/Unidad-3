@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'restApi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django-anime',
+        'NAME': 'clase0706',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'informatica.22',
         'HOST': 'localhost',
         'PORT': '3306'
     }
